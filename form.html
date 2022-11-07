@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Cadastro</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script defer src="./js/javas.js"></script>
+	<meta charset="UTF-8"/>
+</head>
+<body>
+<div class="td">
+	<form action="#" method="post" class="pg">
+    <fieldset>
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="campo">
+                <label for="nome">Sobrenome</label>
+                <input type="text" id="nome2" name="nome" required>
+            </div>
+            <div class="campo">
+            	<label>Foto</label>
+            	<input type="file" id="ft" name="foto">
+            </div>
+        </fieldset>
+        <div class="campo">
+            <label for="rg">RG</label>
+            <input type="text" id="rg" name="rg" required maxlength="14">
+        </div>
+        <div class="campo">
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf" name="cpf" required maxlength="14">
+        </div>
+        <div class="sexo">
+            <label>Sexo:</label>
+            <label>
+                <input type="radio" name="sexo" value="masculino" required/>Masculino
+            </label>
+            <label>
+                <input type="radio" name="sexo" value="feminino" required/>Feminino
+            </label>
+        </div>
+        <div class="campo">
+            <label for="email">E-mail</label>
+            <input type="text" id="email" name="email" required>
+        </div>
+        <div class="campo">
+            <label for="pwd">Senha</label>
+            <input type="text" id="pwd" name="pwd" required minlength="8">
+            <label for="pwd2">Confirmar senha</label>
+            <input type="text" id="pwd2" name="pwd" required minlength="8">
+        </div>     
+        <div class="campo">
+            <label for="tel">Telefone</label>
+            <input type="text" id="tel" name="tel" required maxlength="12">
+        </div>
+        <div class="campo">
+            <label for="nasc">Data de nascimento</label>
+            <input type="date" id="nasc" name="nasc" required>      	
+        </div>
+        <div class="campo">
+        <label for="idade">Anus:</label>
+		<input type="text" name="idade" id="idade" disabled>
+        </div>
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="estado">Estado</label>
+                <select name="estado" id="estado" required>
+                    <option value="">--</option>
+                    <option value="PR">PR</option>
+                    <option value="SC">SC</option>
+                    <option value="MG">MG</option>
+                    <option value="RJ">RJ</option>
+                    <option value="SP">SP</option>
+                    <option value="RS">RS</option>
+                    <option value="TO">TO</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" name="cidade" required>
+            </div>
+        </fieldset>
+
+        <div class="campo">
+            <label for="mensagem">Mensagem</label>
+            <textarea rows="6" id="mensagem" name="mensagem"></textarea>
+        </div>
+
+        <div class="campo">
+            <label>Gostaria de vender sua alma para o CEDUP</label>
+            <label>
+                <input type="radio" name="newsletter" required> Claro!
+            </label>
+        </div>
+        <div id="aceito">
+			<label>Aceito todos os termos e políticas de privacidade</label> 
+			<input type="checkbox" id="lic" name="lic" required>
+    	</div>
+        <button type="submit" name="submit">Enviar</button>
+    </fieldset>
+</form>
+</div>
+</body>
+</html>

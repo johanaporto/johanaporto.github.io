@@ -13,7 +13,9 @@ const lua_z = 10;
 const terra_sz = 17;        
 const tau = 2 * Math.PI;    
 const t_terra = 20;         
-const t_lua = 1;            
+const t_lua = 10;
+const t_lua2 = 1;
+const t_lua3 = 5;         
 
 const sol = new Path2D();
 const lua = new Path2D();
@@ -36,28 +38,28 @@ function draw() {
         ctx.translate(centroX, centroY);
 
         const time = new Date();
-        ctx.rotate((tau/t_terra) * time.getSeconds() + (tau/(t_terra*10000)) * time.getMilliseconds());
+        ctx.rotate((tau/t_terra) * time.getSeconds() + (tau/(t_terra*1000)) * time.getMilliseconds());
         ctx.translate(200, 0);
 
         ctx.fillStyle = 'green';
         ctx.fill(terra); 
 
         ctx.save();
-            ctx.rotate((tau/t_lua) * time.getSeconds() + (tau/(t_lua*500)) * time.getMilliseconds());
+            ctx.rotate((tau/t_lua) * time.getSeconds() + (tau/(t_lua*1000)) * time.getMilliseconds());
             ctx.translate(0, orbl_sz);
             ctx.fillStyle = 'white';
             ctx.fill(lua);
         ctx.restore();
 
         ctx.save();
-            ctx.rotate((tau/t_lua) * time.getSeconds() + (tau/(t_lua*1000)) * time.getMilliseconds());
+            ctx.rotate((tau/t_lua2) * time.getSeconds() + (tau/(t_lua2*1000)) * time.getMilliseconds());
             ctx.translate(0, orbl_s);
             ctx.fillStyle = 'gray';
             ctx.fill(lua);
         ctx.restore();
 
         ctx.save();
-            ctx.rotate((tau/t_lua) * time.getSeconds() + (tau/(t_lua*700)) * time.getMilliseconds());
+            ctx.rotate((tau/t_lua3) * time.getSeconds() + (tau/(t_lua3*1000)) * time.getMilliseconds());
             ctx.translate(0, orbl_z);
             ctx.fillStyle = 'pink';
             ctx.fill(lua);
